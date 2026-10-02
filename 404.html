@@ -1,0 +1,45 @@
+<!doctype html>
+<!--
+  scouncilbms.github.io → forwards visitors to the full portal.
+
+  GitHub Pages can only host static files, so the real site (with login,
+  database, portal) runs on Vercel. This page lives in the repository
+  "scouncilbms/scouncilbms.github.io" and simply redirects there.
+
+  If the portal ever moves (new Vercel project / custom domain), change
+  PORTAL_URL below in BOTH index.html and 404.html and push.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Council · BMS, IIM Kozhikode</title>
+    <meta name="description" content="Official website of the Student Council, Bachelor of Management Studies, IIM Kozhikode." />
+    <script>
+      var PORTAL_URL = "https://student-council-portal.vercel.app";
+      // Keep the path, so scouncilbms.github.io/events → PORTAL_URL/events
+      location.replace(PORTAL_URL + location.pathname + location.search + location.hash);
+    </script>
+    <meta http-equiv="refresh" content="2; url=https://student-council-portal.vercel.app" />
+    <style>
+      :root { color-scheme: light; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f6f1e7; color: #14110f;
+             font-family: system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; padding: 16px; }
+      .mark { display: flex; gap: 6px; justify-content: center; align-items: flex-start; margin-bottom: 20px; }
+      .mark span { display: block; border-radius: 999px; }
+      a { color: #0054a2; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true">
+        <span style="width:16px;height:46px;background:#7a1f2b"></span>
+        <span style="width:18px;height:18px;background:#d6b25e"></span>
+        <span style="width:16px;height:34px;margin-top:12px;background:#0054a2"></span>
+      </div>
+      <h1 style="margin:0 0 8px">Student Council</h1>
+      <p style="margin:0 0 16px;color:#3a3430">Bachelor of Management Studies · IIM Kozhikode</p>
+      <p>Taking you to the website… <a href="https://student-council-portal.vercel.app">Continue</a></p>
+    </main>
+  </body>
+</html>
